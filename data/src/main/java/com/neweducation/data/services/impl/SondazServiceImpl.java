@@ -25,6 +25,8 @@ public class SondazServiceImpl extends AbstractHibernateService<Sondaz> implemen
 
     @Override
     public List<Sondaz> getSondaz(String authToken) {
+        //TODO:
+        authToken = "abc123";
         return dao.getSondaz(authToken);
     }
 

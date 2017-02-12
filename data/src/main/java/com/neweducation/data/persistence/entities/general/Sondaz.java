@@ -14,7 +14,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@NamedQuery(name = "Sondaz.getForUser", query =  "SELECT sond FROM Sondaz sond JOIN sond.glosy g JOIN g.student stud WHERE stud.authToken = :authToken")
+@NamedQuery(name = "Sondaz.getForUser", query =  "SELECT sond FROM Sondaz sond JOIN sond.glosy g JOIN g.student stud")
 public class Sondaz {
 
 	@Id

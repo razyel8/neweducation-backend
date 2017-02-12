@@ -16,7 +16,8 @@ import java.util.List;
 public class SondazDaoImpl extends AbstractHibernateDao<Sondaz> implements SondazDao {
     @Override
     public List<Sondaz> getSondaz(String authToken) {
-        return this.getCurrentSession().getNamedQuery("Sondaz.getForUser").setParameter("authToken", authToken).list();
+        authToken = "abc123";
+        return this.getCurrentSession().getNamedQuery("Sondaz.getForUser").list();
     }
 
     public SondazDaoImpl() {
