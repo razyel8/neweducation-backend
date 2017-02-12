@@ -15,6 +15,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.neweducation</groupId>
+            <artifactId>designation-planning-web-service</artifactId>
+            <version>0.1.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -28,11 +33,7 @@
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.neweducation</groupId>
-            <artifactId>designation-planning-web-service</artifactId>
-            <version>0.1.0</version>
-        </dependency>
+
         <!--         <dependency> -->
 <!--             <groupId>nowa.edukacja</groupId> -->
 <!--             <artifactId>data</artifactId> -->

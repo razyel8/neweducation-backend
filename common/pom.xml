@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.neweducation</groupId>
 	<artifactId>common</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0</version>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/net.sf.dozer/dozer -->
@@ -24,21 +24,19 @@
 			<artifactId>lombok</artifactId>
 			<version>1.16.12</version>
 		</dependency>
-
-
 	</dependencies>
-	<build>
-		<sourceDirectory>src</sourceDirectory>
+	<!--<build>-->
+		<!--<sourceDirectory>src</sourceDirectory>-->
 
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
-				<configuration>
-					<source />
-					<target />
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+		<!--<plugins>-->
+			<!--<plugin>-->
+				<!--<artifactId>maven-compiler-plugin</artifactId>-->
+				<!--<version>3.5.1</version>-->
+				<!--<configuration>-->
+					<!--<source />-->
+					<!--<target />-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+	<!--</build>-->
 </project>

@@ -16,4 +16,29 @@
         <module>designation-planning-web-service</module>
         <!--<module>survey-handling-web-service</module>-->
     </modules>
+
+    <!--<dependencyManagement>-->
+        <!--<dependencies>-->
+            <!--<dependency>-->
+                <!--<groupId>com.neweducation</groupId>-->
+                <!--<artifactId>application</artifactId>-->
+                <!--<version>0.1.0</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>com.neweducation</groupId>-->
+                <!--<artifactId>common</artifactId>-->
+                <!--<version>0.1.0</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>com.neweducation</groupId>-->
+                <!--<artifactId>data</artifactId>-->
+                <!--<version>0.1.0</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>com.neweducation</groupId>-->
+                <!--<artifactId>designation-planning-web-service</artifactId>-->
+                <!--<version>0.1.0</version>-->
+            <!--</dependency>-->
+        <!--</dependencies>-->
+    <!--</dependencyManagement>-->
 </project>
