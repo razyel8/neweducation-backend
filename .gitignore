@@ -8,5 +8,17 @@
 *.war
 *.ear
 
+# VP trash
+*.vux
+*.lck
+*.bak
+
+# Old stuff 
+stage1/
+stage2/
+
+#Idea stuff
+*.idea/
+*.iml
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
