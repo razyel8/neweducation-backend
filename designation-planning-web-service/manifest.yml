@@ -1,0 +1,8 @@
+---
+applications:
+- name: designation-planning-web-service
+  memory: 256M
+  instances: 1
+  host: rest-service
+  domain: guides.spring.io
+  path: build/libs/designation-planning-web-service-0.1.0.jar
