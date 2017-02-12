@@ -9,6 +9,12 @@
 
 	<dependencies>
 
+		<dependency>
+			<groupId>com.neweducation</groupId>
+			<artifactId>common</artifactId>
+			<version>0.1.0</version>
+		</dependency>
+
 		<!-- Spring -->
 
 		<dependency>
@@ -162,11 +168,6 @@
 			<artifactId>lombok</artifactId>
 			<version>1.16.12</version>
 		</dependency>
-		<dependency>
-			<groupId>com.neweducation</groupId>
-			<artifactId>common</artifactId>
-			<version>0.1.0</version>
-		</dependency>
 
 <!-- 		<dependency> -->
 <!-- 			<groupId>org.hibernate</groupId> -->
@@ -182,6 +183,7 @@
 	</dependencies>
 
 	<build>
+		<!--<sourceDirectory>src</sourceDirectory>-->
 		<finalName>spring-hibernate5</finalName>
 		<resources>
 			<resource>

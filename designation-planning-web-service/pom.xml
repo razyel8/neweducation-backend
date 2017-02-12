@@ -6,28 +6,28 @@
 	<groupId>com.neweducation</groupId>
 	<artifactId>designation-planning-web-service</artifactId>
 	<version>0.1.0</version>
-
+	<packaging>jar</packaging>
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.3.RELEASE</version>
+		<groupId>com.neweducation</groupId>
+		<artifactId>deployment</artifactId>
+		<version>1.0</version>
 	</parent>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.jayway.jsonpath</groupId>
-			<artifactId>json-path</artifactId>
-			<scope>test</scope>
-		</dependency>
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-web</artifactId>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-starter-test</artifactId>-->
+			<!--<scope>test</scope>-->
+		<!--</dependency>-->
+		<!--<dependency>-->
+			<!--<groupId>com.jayway.jsonpath</groupId>-->
+			<!--<artifactId>json-path</artifactId>-->
+			<!--<scope>test</scope>-->
+		<!--</dependency>-->
 		<!-- https://mvnrepository.com/artifact/net.sf.dozer/dozer -->
 		<dependency>
 			<groupId>net.sf.dozer</groupId>
@@ -53,11 +53,20 @@
 
 
 	<build>
+		<!--<sourceDirectory>src</sourceDirectory>-->
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
 			</plugin>
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+			<!--</plugin>-->
 		</plugins>
 	</build>
 
