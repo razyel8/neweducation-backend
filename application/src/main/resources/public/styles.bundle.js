@@ -1,12 +1,12 @@
 webpackJsonp([2,4],{
 
-/***/ 406:
+/***/ 411:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(698);
+var content = __webpack_require__(694);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(750)(content, {});
@@ -27,22 +27,22 @@ if(false) {
 
 /***/ }),
 
-/***/ 698:
+/***/ 694:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(699)();
+exports = module.exports = __webpack_require__(695)();
 // imports
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.selected-row{\n    font-weight: bold;\n    background-color: #FBFDEF;\n}\n\n.clickable:hover{\n    background-color: #FBFDEF;\n    cursor: pointer;\n}\n\n.clickable.disabled:hover{\n    background-color: #FBFDEF;\n    cursor: pointer;\n}", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n.selected-row{\n    font-weight: bold;\n    background-color: #FBFDEF;\n}\n\n.clickable:hover{\n    background-color: #FBFDEF;\n    cursor: pointer;\n}\n\n.clickable.disabled:hover{\n    background-color: #FBFDEF;\n    cursor: pointer;\n}\nbody{\n    padding-top: 20px;\n}", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 699:
+/***/ 695:
 /***/ (function(module, exports) {
 
 /*
@@ -355,7 +355,7 @@ function updateLink(linkElement, obj) {
 /***/ 754:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(406);
+module.exports = __webpack_require__(411);
 
 
 /***/ })

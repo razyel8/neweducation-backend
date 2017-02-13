@@ -3,6 +3,6 @@
   "imie": "Adam",
   "nazwisko": "Małysz",
   "login": "abc",
-  "role": 0,
+  "role": 1,
   "authToken": "abc123"
 }
