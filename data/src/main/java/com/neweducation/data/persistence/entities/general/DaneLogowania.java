@@ -1,5 +1,6 @@
 package com.neweducation.data.persistence.entities.general;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -28,6 +29,6 @@ public class DaneLogowania {
 	@Column
 	protected String authToken;
 	
-	@OneToOne
+	@OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private Uzytkownik uzytkownik;
 }

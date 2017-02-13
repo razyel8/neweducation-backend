@@ -3,6 +3,7 @@ package com.neweducation.data.persistence.entities.designations;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
@@ -52,7 +53,7 @@ public class PowierzeniaWSemestrze {
 	@Enumerated
 	private StatusPowierzenWSemestrze statusPowierzenWSemestrze;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<Powierzenie> powierzenia = new ArrayList<Powierzenie>();
 
 	@ManyToOne

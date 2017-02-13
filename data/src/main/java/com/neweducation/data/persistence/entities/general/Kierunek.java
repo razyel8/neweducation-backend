@@ -3,6 +3,7 @@ package com.neweducation.data.persistence.entities.general;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
@@ -42,24 +43,50 @@ public class Kierunek {
 	@Column
 	private String stopien;
 
-	@OneToMany
+	@OneToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private List<Specjalnosc> specjalnosci = new ArrayList<Specjalnosc>();
 
 	@ManyToOne
 	private PelnomocnikDziekanaDsKierunku pelnomocnikDziekanaDsKierunku;
 
-	@OneToOne
-	private SekretarzKierunkuStudiow sekretarzKierunkuStudiow;
+	
+//	@OneToOne(optional= true)
+//	private SekretarzKierunkuStudiow sekretarzKierunkuStudiow;
 
 	@ManyToOne
 	private Wydzial wydzial;
 
-	@OneToMany
+	@OneToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private List<PlanStudiow> planyStudiows = new ArrayList<PlanStudiow>();
 
-	@Enumerated
-	private RodzajStudiow rodzajStudiow;
+	//DELETED !!!
+//	@Enumerated
+//	private RodzajStudiow rodzajStudiow;
 
 	@OneToMany
 	private List<PowierzeniaWSemestrze> powierzeniaWSemestrze = new ArrayList<PowierzeniaWSemestrze>();
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Kierunek other = (Kierunek) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+	
+	
 }

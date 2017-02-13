@@ -43,19 +43,19 @@ public class Powierzenie {
 	@Enumerated
 	private StatusPowierzenia statusPowierzenia;
 
-	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
+	@ManyToOne
 	private Zapotrzebowanie zapotrzebowanie;
 
-	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
+	@ManyToOne
 	private PowierzeniaWSemestrze powierzeniaWSemestrze;
 
-	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
+	@ManyToOne
 	private Kurs kurs;
 
 	@ManyToOne
 	private PowierzeniaProwadzacego powierzeniaProwadzacego;
 
-	@ManyToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
+	@ManyToOne
 	private ProwadzacyZajecia prowadzacyZajecia;
 
 	// tego chyba nie ma

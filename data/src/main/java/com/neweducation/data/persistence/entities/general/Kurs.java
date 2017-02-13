@@ -3,6 +3,7 @@ package com.neweducation.data.persistence.entities.general;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
@@ -39,10 +40,10 @@ public class Kurs {
 	@ManyToOne
 	private Przedmiot przedmiot;
 
-	@OneToMany
+	@OneToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private List<Powierzenie> powierzenia = new ArrayList<Powierzenie>();
 
-	@OneToMany
+	@OneToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private List<Zapotrzebowanie> zapotrzebowanie = new ArrayList<Zapotrzebowanie>();
 
 	@Enumerated

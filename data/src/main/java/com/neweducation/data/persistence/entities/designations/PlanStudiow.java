@@ -3,6 +3,7 @@ package com.neweducation.data.persistence.entities.designations;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
@@ -32,7 +33,7 @@ public class PlanStudiow {
 	@Column
 	private String cyklNauczania;
 
-	@ManyToMany
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private List<Przedmiot> przedmioty = new ArrayList<Przedmiot>();
 
 	@ManyToOne

@@ -29,10 +29,10 @@ public class PowierzeniaProwadzacego {
 	private long id;
 
 	@Column
-	private String limitGodzin;
+	private int limitGodzin;
 
 	@Column
-	private String przydzieloneGodziny;
+	private int przydzieloneGodziny;
 
 	@ManyToOne
 	private ProwadzacyZajecia prowadzacyZajecia;

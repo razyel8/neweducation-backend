@@ -29,16 +29,16 @@ public class Przedmiot {
 	@Column
 	private String nazwa;
 
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<KartaPrzedmiotu> kartyPrzedmiotu = new ArrayList<KartaPrzedmiotu>();
 
-	@ManyToMany
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private List<PlanStudiow> planyStudiow = new ArrayList<PlanStudiow>();
 
 	@OneToMany(cascade = CascadeType.ALL)
 	private List<Kurs> kursy = new ArrayList<Kurs>();
 
-	@ManyToMany
+	@ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH })
 	private List<ProwadzacyZajecia> prowadzacyZajecia = new ArrayList<ProwadzacyZajecia>();
 
 }

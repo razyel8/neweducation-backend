@@ -26,6 +26,6 @@ public class KartaPrzedmiotu {
 	@Column
 	private String numerSemestru;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne
 	private Przedmiot przedmiot;
 }
