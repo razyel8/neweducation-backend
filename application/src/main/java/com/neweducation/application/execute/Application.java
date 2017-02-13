@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @SpringBootApplication
-//@EnableAutoConfiguration
+@EnableAutoConfiguration
 @ComponentScan(basePackages={"com.neweducation.application.config","com.neweducation.application.controllers"})
 public class Application {
 	

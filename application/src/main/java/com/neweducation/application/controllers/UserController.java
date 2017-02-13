@@ -4,10 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import dtos.DesignationTo;
 import dtos.Role;
@@ -16,20 +14,41 @@ import dtos.UserTo;
 @RestController
 public class UserController extends AbstractController {
 
+	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public Map<String, Object> login(@RequestParam(value = "login") String login,
-			@RequestParam(value = "password") String password) {
+	public ResponseEntity<UserTo> login(@RequestParam(value = "login") String login,
+								@RequestParam(value = "password") String password) {
 
-		Map<String, Object> response = new HashMap<String, Object>();
-		// Tu get User z bazy
-		response.put("id", 123L);
-		response.put("imie", "Dariusz");
-		response.put("nazwisko", "Małysz");
-		response.put("login", 123L);
-		response.put("uprawnienie", Role.STUDENT);
-		response.put("auth_token", "abc123");
+		UserTo user = new UserTo();
 
-		return response;
+		switch(login){
+			case "stud":
+				user.setId(1);
+				user.setImie("Wojciech");
+				user.setNazwisko("Małysz");
+				user.setRole(1);
+				user.setAuthToken("abc1");
+				break;
+			case "prac":
+				user.setId(2);
+				user.setImie("Dariusz");
+				user.setNazwisko("Kot");
+				user.setRole(2);
+				user.setAuthToken("abc1");
+				break;
+
+			case "pelno":
+				user.setId(3);
+				user.setImie("Maciej");
+				user.setNazwisko("Kubica");
+				user.setRole(3);
+				user.setAuthToken("abc1");
+				break;
+			default:
+				return ResponseEntity.notFound().build();
+		}
+
+		return ResponseEntity.ok(user);
 	}
 
 	@RequestMapping(value = "/users/{user}", method = RequestMethod.GET)

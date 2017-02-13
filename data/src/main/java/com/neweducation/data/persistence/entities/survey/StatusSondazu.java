@@ -12,7 +12,6 @@ public enum StatusSondazu {
 	Nieaktywny(2), 
 	Zakonczony(3);
 	
-	
     private StatusSondazu(int value) {
         this.value = value;
     }

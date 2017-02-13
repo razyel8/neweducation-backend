@@ -8,7 +8,7 @@ import lombok.Setter;
 public class UserTo {
 	long id;
 	String authToken;
-	Role role;
+	int role;
 	String imie;
 	String nazwisko;
 }
