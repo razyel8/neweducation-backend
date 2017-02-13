@@ -28,7 +28,7 @@ var UserService = (function () {
         this.http = http;
         this.appRef = appRef;
         this.router = router;
-        this.loginUrl = 'http://localhost:8080/login';
+        this.loginUrl = '/login';
         this.activeUser = null;
         //For design only:
         // this.activeUser = new User();
